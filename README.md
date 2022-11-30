@@ -15,9 +15,9 @@ This script was very quickly written. So, forgive me if you consider the interna
 ```
 or  
 ```php
-<?php echo get_a_better_excerpt(null, null, array(), true); ?>
+<?php echo get_a_better_excerpt(null, null, array(), array(), true); ?>
 ```
 where arguments could be :  
 ```php
-<?php echo get_a_better_excerpt($post->post_content, 600, ['h2', 'script', 'style'], false); ?>
+<?php echo get_a_better_excerpt($post->post_content, 600, ['h2', 'script', 'style'], ['codepen', 'text-muted'], false); ?>
 ```

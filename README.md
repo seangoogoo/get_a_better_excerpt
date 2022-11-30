@@ -7,5 +7,5 @@ Recently using get_the_excerpt() in a custom theme, I noticed that WordPress ind
 
 <h2>Usage</h2>
 1/ Copy the code snippet in your functions.php file.\n
-2/ Call it from a post loop in index.php, front-page.php or archive.php with :\n
+2/ Call it from a post loop in index.php, front-page.php or archive.php with :/n
 <?php echo get_a_better_excerpt(null, null, array(), true); ?>

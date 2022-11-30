@@ -1,3 +1,4 @@
+<?php
 //************************************************************************
 //* Replace the native WordPress function get_the_excerpt() by returning :
 //* - a string filtered from title, script, style, figure tags and Codepen references
@@ -47,3 +48,4 @@ function get_a_better_excerpt($the_post_content = null, $max_char = null, $tags_
 	$blog_excerpt = (strlen($clean_content) > $max_char) ? substr($clean_content, 0, strpos($clean_content, ' ', $max_char)) . ' ...' : $clean_content;
 	return $blog_excerpt;
 }
+?>

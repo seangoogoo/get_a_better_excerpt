@@ -1,9 +1,10 @@
 <?php
 //************************************************************************
 //* Replace the native WordPress function get_the_excerpt() by returning :
-//* - a string filtered from title, script, style, figure tags and Codepen references
-//* - only paragraph tags
-function get_a_better_excerpt($the_post_content = null, $max_char = null, $tags_list = array(), $keep_only_p = true) {
+//* - a string filtered from any given tags
+//* - a string filtered from any given class
+//* - only paragraph tags or not
+function get_a_better_excerpt($the_post_content = null, $max_char = null, $tags_list = array(), $classes_list = array(), $keep_only_p = true) {
 
 	//* If the post already contains a specific excerpt, return it
 	if(has_excerpt()) return get_post()->post_excerpt;
@@ -22,14 +23,14 @@ function get_a_better_excerpt($the_post_content = null, $max_char = null, $tags_
 		foreach (iterator_to_array($custom_post_content->getElementsByTagName($tag_to_remove)) as $tag) $tag->parentNode->removeChild($tag);
 	}
 
-	//* Remove specific Codepen paragraphs
+	//* Remove tags with specific classes
+	if(empty($classes_list)) $classes_list = ['codepen'];
 	$xpath = new DOMXPath($custom_post_content);
-	foreach ($xpath->query("//*[contains(@class, 'codepen')]") as $tag) $tag->parentNode->removeChild($tag);
+	foreach($classes_list as $class_to_remove) {
+		foreach ($xpath->query("//*[contains(@class, '".$class_to_remove."')]") as $tag) $tag->parentNode->removeChild($tag);
+	}
 
-	//* Debug
-	// return $custom_post_content->saveHTML();
-	// echo $custom_post_content->textContent;
-	// return false;
+	//* Keep only paragraph tags
 	if($keep_only_p) {
 		//* Select and return paragraph tags only and convert their HTML entities
 		$p_nodes = $custom_post_content->getElementsByTagName('p');

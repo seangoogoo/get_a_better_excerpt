@@ -8,7 +8,7 @@ Recently using get_the_excerpt() in a custom theme, I noticed that WordPress ind
 ## Usage
 1/ Copy the code snippet in your functions.php file.  
 2/ Call it from a post loop in index.php, front-page.php or archive.php with : 
-```
+```php
 <?php echo get_a_better_excerpt(); ?>
 ```
 or  

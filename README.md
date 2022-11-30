@@ -1,4 +1,4 @@
-# get_a_better_excerpt
+# get_a_better_excerpt for WordPress
 
 This function is intended to replace the native WordPress function get_the_excerpt() wich retrieve the excerpt of a post.
 

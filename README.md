@@ -26,6 +26,15 @@ where arguments could be :
 
 ### 1/ $the_post_content  
 This argument is not the most usefull of all but one can use it to pass a singular HTML string to get an excerpt (not tested).
+If an excerpt isn't already defined in the article, default value is :  
+```php
+$the_post_content = get_post()->post_content;
+```
 
 ### 2/ $max_char
+An integer representing the length of the excerpt in characters, without truncating words, if the excerpt is shorter than the article content.
+Default value is :  
+```php
+$max_char = 320;
+```
 

@@ -12,10 +12,10 @@ Recently using get_the_excerpt() in a custom theme, I noticed that WordPress ind
 <?php echo get_a_better_excerpt(); ?>
 ```
 or  
-```
+```php
 <?php echo get_a_better_excerpt(null, null, array(), true); ?>
 ```
 where arguments could be :  
-```
+```php
 <?php echo get_a_better_excerpt($post->post_content, 600, ['h2', 'script', 'style'], false); ?>
 ```

@@ -8,7 +8,7 @@ Recently using get_the_excerpt() in a custom theme, I noticed that WordPress ind
 This script was very quickly written. So, forgive me if you consider the internal logic a bit weird. Anyway, it can be perfected but it does the job at least for my own usage. Any comments and improvements are welcome.
 
 ## Usage
-1/ Copy the code snippet in your functions.php file.  
+### 1/ Copy the code snippet in your functions.php file.  
 2/ Call it from a post loop in index.php, front-page.php or archive.php with : 
 ```php
 <?php echo get_a_better_excerpt(); ?>
@@ -21,3 +21,11 @@ where arguments could be :
 ```php
 <?php echo get_a_better_excerpt($post->post_content, 600, ['h2', 'script', 'style'], ['codepen', 'text-muted'], false); ?>
 ```
+
+## Arguments
+
+### 1/ $the_post_content  
+This argument is not the most usefull of all but one can use it to pass a singular HTML string to get an excerpt (not tested).
+
+### 2/ $max_char
+

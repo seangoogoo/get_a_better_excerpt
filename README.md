@@ -38,3 +38,23 @@ Default value is :
 $max_char = 320;
 ```
 
+### 3/ $tags_list
+An array representing a list of the HTML tags to remove from the content.
+Default value is :  
+```php
+$tags_list = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'style', 'figure', 'script'];
+```
+
+### 4/ $classes_list
+An array representing a list of the tags identified by classes to remove from the content.
+Default value is :  
+```php
+$classes_list = ['codepen'];
+```
+
+### 5/ $keep_only_p
+A boolean that defines whether or not the returned content will retain only the paragraph tags.
+Default value is :  
+```php
+$keep_only_p = true;
+```

@@ -25,7 +25,7 @@ where arguments could be :
 ## Arguments
 
 ### 1/ $the_post_content  
-This argument is not the most usefull of all but one can use it to pass a singular HTML string to get an excerpt (not tested).
+This argument is not the most useful of all but one can use it to pass a singular HTML string to get an excerpt (not tested).
 If an excerpt isn't already defined in the article, default value is :  
 ```php
 $the_post_content = get_post()->post_content;

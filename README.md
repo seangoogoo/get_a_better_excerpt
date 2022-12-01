@@ -32,21 +32,21 @@ $the_post_content = get_post()->post_content;
 ```
 
 ### 2/ $max_char
-An integer representing the length of the excerpt in characters, without truncating words, if the excerpt is shorter than the article content.
+An integer representing the length of the excerpt in number of characters, without truncating words, if the excerpt is shorter than the article content.
 Default value is :  
 ```php
 $max_char = 320;
 ```
 
 ### 3/ $tags_list
-An array representing a list of the HTML tags to remove from the content.
+An array representing a list of the HTML types of tags to remove from the content.
 Default value is :  
 ```php
 $tags_list = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'style', 'figure', 'script'];
 ```
 
 ### 4/ $classes_list
-An array representing a list of the tags identified by classes to remove from the content.
+An array representing a list of the tags identified by their classes to remove from the content.
 Default value is :  
 ```php
 $classes_list = ['codepen'];

@@ -17,7 +17,7 @@ function get_a_better_excerpt($the_post_content = null, $max_char = null, $tags_
 	$custom_post_content->loadHTML(mb_convert_encoding($the_post_content, 'HTML-ENTITIES', "UTF-8"));
 	libxml_clear_errors(); //* <= avoid warnings
 
-	//* Remove script and title tags from content
+	//* Remove script, title tags and so on from content
 	if(empty($tags_list)) $tags_list = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'style', 'figure', 'script'];
 	foreach($tags_list as $tag_to_remove) {
 		foreach (iterator_to_array($custom_post_content->getElementsByTagName($tag_to_remove)) as $tag) $tag->parentNode->removeChild($tag);
